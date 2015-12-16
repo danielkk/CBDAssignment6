@@ -22,7 +22,7 @@ namespace CBD
             this.balance = amount;
         }
 
-        public void deposit(double amount)
+        public void Deposit(double amount)
         {
             Contract.Requires(amount > 0, "Amount under 0!");
             double oldBalance = balance;
@@ -30,8 +30,9 @@ namespace CBD
             Contract.Assert(oldBalance < balance);
         }
 
-        public void withdraw(double amount)
+        public void Withdraw(double amount)
         {
+            Contract.Requires(amount > 0, "Amount under 0!");
             Contract.Requires(amount <= balance, "Withdraw amount larger than balance!");
             balance -= amount;
             Contract.Assert(balance >= 0, "Balance under 0!!");

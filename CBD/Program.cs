@@ -13,11 +13,11 @@ namespace CBD
         {
             Account account = new Account(1000.00);
 
-            account.deposit(200.00);
+            account.Deposit(200.00);
 
-            account.withdraw(1000.00);
+            account.Withdraw(1000.00);
 
-            account.withdraw(200.00);
+            account.Withdraw(200.00);
         }
     }
 }
